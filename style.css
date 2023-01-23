@@ -439,7 +439,7 @@ a {
 }
 
 /* MISE EN PLACE DU RESPONSIVE DESIGN */
-@media all and (min-width: 1024px) and (max-width: 1400px) {
+@media all and (min-width: 992px) and (max-width: 1400px) {
   .first-block {
     width: 52%;
   }
@@ -517,7 +517,7 @@ a {
 
 /* RESPONSIVE DESIGN POUR TABLETTE */
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 768px) and (max-width: 992px) {
   .nav-link {
     padding-right: 72px;
   }
@@ -631,7 +631,7 @@ a {
 
   .activities-title {
     padding-top: 8px;
-    font-size: 16px;
+    font-size: 13px;
   }
   .activities-block h2 {
     padding-left: 0;
@@ -682,7 +682,7 @@ a {
   }
 }
 
-@media all and (min-width: 300px) and (max-width: 768px) {
+@media all and (min-width: 300px) and (max-width: 767px) {
   body {
     width: 100%;
   }
@@ -818,10 +818,16 @@ a {
     max-width: 100%;
     border-radius: 0px;
   }
-
+  .card-container-second-block {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
   .card-pop {
-    min-width: 80%;
-    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 100%;
+    min-width: auto;
     height: auto;
     justify-content: flex-start;
   }
