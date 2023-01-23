@@ -8,6 +8,7 @@
   max-width: 1400px;
 }
 
+/* Utilisation de grid pour placer les éléments de mon header */
 header {
   height: 88px;
   display: grid;
@@ -46,7 +47,7 @@ header {
   position: relative;
   margin-top: 40px;
 }
-
+/* Mise en place de la barre bleue au survol des liens  */
 .hebergements:hover::before,
 .activites:hover::before {
   content: "";
@@ -176,7 +177,7 @@ input:focus {
   padding-left: 69px;
   padding-bottom: 39px;
 }
-
+/* Logo I sous forumlaire filtres */
 .info-logo {
   border: 1px solid #d9d9d9;
   width: 24px;
@@ -189,7 +190,7 @@ input:focus {
   align-items: center;
   justify-content: center;
 }
-
+/* Premier gros block contenant les cartes et cartes populaires */
 .block-card {
   position: relative;
   display: flex;
@@ -198,6 +199,13 @@ input:focus {
   justify-content: space-around;
   gap: 40px;
   width: 100%;
+}
+
+/* Enlever  la couleur bleue et le sous-lignages des cartes cliquables */
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .block-card h2 {
@@ -311,7 +319,7 @@ input:focus {
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 40px;
-  width: 100%;
+  max-width: 343px;
   width: 343px;
   height: 144px;
   background-color: #ffffff;
@@ -592,7 +600,7 @@ input:focus {
     margin: auto;
     min-width: 30%;
     width: 90%;
-    height: 100%;
+    height: 200px;
   }
 
   .image-container-pop {
@@ -813,8 +821,7 @@ input:focus {
 
   .card-pop {
     min-width: 80%;
-    max-width: 80%;
-    width: auto;
+    width: fit-content;
     height: auto;
     justify-content: flex-start;
   }
