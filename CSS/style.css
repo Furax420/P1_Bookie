@@ -254,8 +254,11 @@ a {
 }
 
 .image-container {
-  width: 100%;
   float: left;
+  position: relative;
+  width: 246px;
+  height: 124px;
+  overflow: hidden;
 }
 
 .card-body {
@@ -265,13 +268,17 @@ a {
 }
 
 .image-container img {
+  max-width: 246px;
+  max-height: 124px;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-width: 246px;
-  max-height: 124px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.image-container:hover img {
+  transform: scale(1.2);
+}
 .title {
   max-width: 246px;
   font-size: 16px;
@@ -330,12 +337,24 @@ a {
   display: grid;
 }
 
+.image-container-pop {
+  position: relative;
+  width: 137px;
+  height: 144px;
+  overflow: hidden;
+}
+
 .image-container-pop img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   width: 137px;
   height: 144px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container-pop:hover img {
+  transform: scale(1.2);
 }
 
 .icon-and-title {
@@ -415,6 +434,18 @@ a {
 .activities-image-container img {
   height: 389px;
   width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.activities-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.activities-image-container:hover img {
+  transform: scale(1.2);
 }
 
 .footer {
@@ -848,7 +879,12 @@ a {
     margin-right: 20px;
   }
 
+  .image-container {
+    width: 100%;
+  }
+
   .image-container img {
+    width: 100%;
     max-width: 100%;
   }
 
