@@ -637,6 +637,7 @@ a {
   .image-container-pop {
     max-width: 100%;
     width: auto;
+    height: 100%;
   }
 
   .image-container-pop img {
