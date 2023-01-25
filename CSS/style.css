@@ -299,8 +299,9 @@ a {
   color: #ccc;
 }
 
-#bright {
+.bright i {
   color: #0065fc;
+  display: flex;
 }
 
 #resize-img {
@@ -737,6 +738,19 @@ a {
     padding-right: 0;
   }
 
+  /* Possibilité d'utiliser display grid également :
+  
+  .nav-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-self: center;
+    width: 100%;
+    padding-right: 0;
+  }
+  
+  */
+
   .hebergements,
   .activites {
     text-align: center;
@@ -744,10 +758,14 @@ a {
     margin-bottom: 20px;
   }
 
+  /* Ne plus afficher la barre au dessus avec 0px */
+
   .hebergements:hover::before,
   .activites:hover::before {
     border-top: 0px solid black;
   }
+
+  /* Ajout barre grise sous les nav links + hover bleue */
   .nav-link .bar {
     position: absolute;
     width: 50%;
@@ -789,7 +807,7 @@ a {
   }
 
   .search-icon {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     border: none;
