@@ -416,6 +416,8 @@ grid-gap: 20px;
 position: absolute;
 display: flex;
 bottom: 5px;
+font-size: 14px;
+
 }
 
 .card-container-second-block {
@@ -819,6 +821,10 @@ header {
   }
 .text-pop, .text {
   font-size: 15px;
+}
+
+.title {
+padding-bottom: 0px;
 }
   .image-container-pop {
     width: 100%;
