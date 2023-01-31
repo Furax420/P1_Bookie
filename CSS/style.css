@@ -399,9 +399,10 @@ flex-direction: column;
 
 .icon-and-title {
 display: grid;
-grid-template-columns: 4fr 1fr; 
+grid-template-columns: 8fr 1fr; 
 align-items: center;
 margin-top: 1.8em;
+grid-gap: 20px;
 
 }
 
