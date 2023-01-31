@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 body {
   font-family: "Raleway", sans-serif;
   margin: auto;
@@ -9,6 +11,8 @@ body {
   padding-left: 50px;
   padding-right: 50px;
 }
+
+
 
 /* Utilisation de grid pour placer les éléments de mon header */
 header {
@@ -209,7 +213,9 @@ input:focus {
   width: 100%;
 
 }
-
+.euro {
+  font-weight: 600;
+}
 /* Enlever  la couleur bleue et le sous-lignages des cartes cliquables */
 
 a {
