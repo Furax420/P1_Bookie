@@ -2,10 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-* {
+body {
   font-family: "Raleway", sans-serif;
-  margin: 0 0 0 0;
-  max-width: 1400px;
+  margin: auto;
+  max-width: 1300px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Utilisation de grid pour placer les éléments de mon header */
@@ -20,7 +22,7 @@ header {
   grid-column: 1;
   justify-content: flex-start;
   align-self: center;
-  padding-left: 72px;
+
 }
 .logo img {
   width: 61.09px;
@@ -33,7 +35,6 @@ header {
   gap: 67px;
   display: flex;
   flex-direction: row;
-  padding-right: 72px;
 }
 
 .nav-link a {
@@ -66,25 +67,30 @@ header {
   position: relative;
   font-weight: 700;
   font-size: 22px;
-  padding-left: 55px;
   padding-bottom: 8px;
+
 }
 
 .sous-titre h2 {
-  padding-left: 55px;
   font-weight: 400;
   font-size: 16px;
   padding-bottom: 20px;
+
 }
 
 .form-horizontal {
+  padding-left: 0;
+  padding-bottom: 35px;
+  max-width: 435px;
   display: flex;
   flex-wrap: nowrap;
   border: none;
   position: relative;
-  padding-left: 55px;
 }
+.form {
+  max-width: 435px;
 
+}
 .loc-button {
   background: #f2f2f2;
   font-size: 18px;
@@ -96,8 +102,12 @@ header {
 .search-text {
   border: 1px solid #f2f2f2;
   font-weight: 700;
-  padding-left: 15px;
   font-size: 18px;
+  padding-left: 10px;
+}
+
+::placeholder {
+  color: black;
 }
 
 /* Suppression des bordures noires épaisses quand on clique sur la zone a remplir */
@@ -139,7 +149,6 @@ input:focus {
 }
 
 .filtres {
-  padding-left: 62px;
   padding-bottom: 50px;
 }
 
@@ -156,7 +165,7 @@ input:focus {
   width: auto;
   padding: 1em 1em;
   font-weight: 700;
-  font-size: 17px;
+  font-size: min(1.5vw, 18px);
 }
 
 .filtre:hover {
@@ -174,12 +183,13 @@ input:focus {
   align-items: center;
   gap: 20px;
   flex-grow: 0;
-  padding-left: 69px;
   padding-bottom: 39px;
 }
 /* Logo I sous forumlaire filtres */
 .info-logo {
   border: 1px solid #d9d9d9;
+  min-width: 24px;
+  min-height: 24px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -193,12 +203,11 @@ input:focus {
 /* Premier gros block contenant les cartes et cartes populaires */
 .block-card {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 20px;
   width: 100%;
+
 }
 
 /* Enlever  la couleur bleue et le sous-lignages des cartes cliquables */
@@ -209,69 +218,75 @@ a {
 }
 
 .block-card h2 {
-  padding-left: 1em;
-  margin-top: 1.8em;
+  padding-left: 5%;
 }
 
 .first-block {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: auto;
-  width: 66%;
+  display: grid;
+  grid-template-rows: repeat(1fr 3); 
+ height: auto;
   background-color: #f2f2f2;
   border-radius: 20px;
+  width: 100%;
+}
+
+.first-block h2 {
+  margin-top: 1.8em;
 }
 
 .second-block {
   position: relative;
+  width: auto;
   height: auto;
-  max-width: 28%;
   background-color: #f2f2f2;
   border-radius: 20px;
   padding-bottom: 25px;
 }
 
 .card-container-first-block {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
+  width: 90%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr; 
+  justify-self: center;
+  align-self: center;
+  margin: auto;
+  gap : 45px;
+
+
 }
 
 .card {
+  margin: auto;
   width: 100%;
-  margin: 10px;
-  max-width: 246px;
-  max-height: 199px;
+  height: 199px;
   background-color: #ffffff;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   border: 5px solid #ffffff;
   border-radius: 20px;
   overflow: hidden;
+  display: grid;
+  grid-template-rows: 100% 1fr 1fr 1fr;  
 }
 
 .image-container {
-  float: left;
+  width: auto;
   position: relative;
-  width: 246px;
-  height: 124px;
+  height:68%;
   overflow: hidden;
 }
 
 .card-body {
-  width: 100%;
-  padding: 10px;
-  float: left;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-left: 5px;
 }
 
 .image-container img {
-  max-width: 246px;
-  max-height: 124px;
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
@@ -279,21 +294,31 @@ a {
 .image-container:hover img {
   transform: scale(1.2);
 }
+
 .title {
-  max-width: 246px;
-  font-size: 16px;
-  padding-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: min(1.2vw, 16px);
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 3px;
 }
 
 .text {
-  font-size: 14px;
-  padding-bottom: 5px;
+  font-size: 15px;
+  margin: 0;
+  font-size: min(1.5vw, 14px);
+
 }
 
 .stars {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
   display: flex;
+  margin: 0;
+  font-size: 14px;
 }
-
 .stars,
 .stars-pop i {
   color: #ccc;
@@ -310,24 +335,21 @@ a {
 
 .show-more {
   padding-top: 20px;
-  padding-left: 56px;
+  margin-bottom: 5%;
+  padding-left: 5%;
   font-size: 18px;
   font-weight: 700;
 }
 
 .card-body-pop {
   padding: 10px;
-  float: left;
-  display: grid;
-  grid-column-start: 2;
+  display: flex;
+flex-direction: column;
 }
 
 .card-pop {
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 40px;
-  max-width: 343px;
-  width: 343px;
+  margin: auto;
+  width: auto;
   height: 144px;
   background-color: #ffffff;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -335,11 +357,25 @@ a {
   border-radius: 20px;
   overflow: hidden;
   display: grid;
+  grid-template-columns: 0.7fr 1fr;
 }
+.title-pop {
+  margin: 0;
+  padding-bottom: 0;
+  font-size: min(1.4vw, 16px);
+}
+
+.text-pop {
+  margin: 0;
+  font-size: 15px;
+  font-size: min(1.4vw, 14px);
+
+}
+
 
 .image-container-pop {
   position: relative;
-  width: 137px;
+  width: 100%;
   height: 144px;
   overflow: hidden;
 }
@@ -348,7 +384,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  width: 137px;
   height: 144px;
   transition: transform 0.3s ease-in-out;
 }
@@ -358,81 +393,85 @@ a {
 }
 
 .icon-and-title {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+display: grid;
+grid-template-columns: 4fr 1fr; 
+align-items: center;
+margin-top: 1.8em;
+
 }
 
 .grow {
-  padding-right: 42px;
+  justify-items: center; 
+  align-self: center;
   color: #0065fc;
 }
 
 .stars-pop {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  flex-wrap: nowrap;
+position: absolute;
+display: flex;
+bottom: 5px;
 }
 
 .card-container-second-block {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
+  display: grid;
+  width: 80%;
+  grid-template-rows: 1fr 1fr 1fr;  
+  grid-gap: 25px;
+  justify-self: center;
+  align-self: center;
 }
 
 .activities-block {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: auto;
+  height: 80%;
+  width: 100%;
   padding-bottom: 61px;
+
 }
 
 .activities-block h2 {
   position: relative;
-  padding-left: 50px;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 19px;
 }
 .activities-title {
+  margin: 0;
   padding-left: 19px;
-  padding-top: 12px;
+  padding-top: 5%;
+  font-size: min(1.2vw, 16px);
+
+
 }
 .activities-card-container {
+  width:auto;
   position: relative;
-  min-height: 444px;
-  min-width: 302px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100%;
 }
 
 .activities-card {
+  height: 100%;
+  width: 100%;
   position: relative;
-  min-width: 100%;
-  max-width: 302px;
-  max-height: 444.51px;
   background-color: #ffffff;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   border-radius: 20px;
   overflow: hidden;
 }
 .activities-card-wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5%;
   align-items: center;
-  justify-content: space-around;
-  gap: 43px;
   width: 100%;
-  justify-content: center;
-  align-items: center;
 }
 .activities-image-container img {
-  height: 389px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
@@ -442,6 +481,7 @@ a {
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: 85%;
 }
 
 .activities-image-container:hover img {
@@ -449,216 +489,97 @@ a {
 }
 
 .footer {
-  margin-left: 5%;
-  margin-right: 5%;
   position: relative;
   padding-bottom: 58px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: space-around;
+  display: grid;
+grid-template-columns: 1fr 2fr 1fr 0.5fr;  
+justify-items: center;
   background-color: #d9d9d9;
 }
 
 .footer h2 {
-  padding-top: 45px;
+  padding-top: 30px;
   padding-bottom: 20px;
+  font-size: 18px;
+  padding-left: 5%;
 }
 
 .footer p {
-  padding-bottom: 12px;
-}
+  font-size: 16px;
+  padding-left: 5%;
 
-/* MISE EN PLACE DU RESPONSIVE DESIGN */
-@media all and (min-width: 992px) and (max-width: 1400px) {
-  .first-block {
-    width: 52%;
-  }
-  .second-block {
-    min-width: 40%;
-  }
 
-  .card-container-first-block {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-  }
-  .card {
-    width: 40%;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card-pop {
-    width: 80%;
-  }
-
-  .show-more {
-    padding-bottom: 35px;
-  }
-
-  .activities-block {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-  }
-  .activities-card-container {
-    position: relative;
-    min-height: auto;
-    min-width: 0%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .activities-image-container img {
-    height: 211px;
-    width: 182px;
-  }
-
-  .activities-card {
-    position: relative;
-    max-width: 200px;
-    background-color: #ffffff;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    border-radius: 20px;
-    overflow: hidden;
-    min-width: 0;
-    width: 182px;
-    height: 267px;
-  }
-  .activities-card-wrapper {
-    min-width: 0;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-  }
-
-  .activities-title {
-    font-size: 15px;
-  }
 }
 
 /* RESPONSIVE DESIGN POUR TABLETTE */
 
-@media all and (min-width: 768px) and (max-width: 992px) {
-  .nav-link {
-    padding-right: 72px;
+@media all and (max-width: 992px) {
+
+  body {
+    margin: 0 72px;
+    padding-left: 0px;
+    padding-right: 0px;
+  
   }
-  .block-card {
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    margin-left: 72px;
-    margin-right: 72px;
-    overflow: hidden;
-  }
+.filtre-border {
+  gap: 2%;
+}
   .filtres-container {
-    flex-wrap: nowrap;
-    gap: 10px;
-    width: 100%;
+    gap: 1%;
+    padding-top: 25px;
   }
+  
+  .filtres {
+    padding-bottom: 25px;
+  }
+.filtre {
+  font-size: min(1.7vw, 17px);
 
-  .filtre-border {
+}
+  .block-card {
     display: flex;
-    flex-direction: row;
-    gap: 12px;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-  }
-  .filtre {
-    display: flex;
-    flex-wrap: nowrap;
-    font-size: 14px;
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .filtres i {
-    padding-right: 5px;
-  }
-
-  .first-block {
-    width: 100%;
-  }
-
-  .card {
-    width: 27%;
-    max-height: 246px;
-    justify-content: space-between;
-  }
-
-  .card-container-first-block {
-    justify-content: center;
-    padding-top: 23px;
-    gap: 0;
-  }
-
-  .image-container img {
-    height: 124px;
-  }
-
-  .show-more {
-    padding-bottom: 46px;
-  }
-  .second-block {
-    max-width: 100%;
-    width: 100%;
+  .title {
+    font-size: min(1.8vw, 16px);
   }
 
   .card-container-second-block {
-    flex-direction: row;
-    justify-items: flex-start;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  margin: auto;
+  width: 90%;
   }
-
-  .card-body-pop {
-    display: grid;
-    grid-template-rows: 1fr 2fr auto;
-    width: auto;
-  }
+ 
   .card-pop {
-    margin: auto;
-    min-width: 30%;
-    width: 90%;
-    height: 200px;
+   width: 100%;
   }
-
-  .image-container-pop {
-    max-width: 100%;
-    width: auto;
-    height: 100%;
-  }
-
-  .image-container-pop img {
-    width: auto;
-    max-width: 100%;
-    height: 100%;
-    min-height: 144px;
-  }
-
   .title-pop {
-    font-size: 16px;
-    overflow: hidden;
+    margin: 0;
+    padding-bottom: 0;
+    font-size: min(1.8vw, 16px);
   }
-
+  
   .text-pop {
-    font-size: 14px;
-    grid-row: 2;
+    margin: 0;
+    font-size: 15px;
+    font-size: min(1.7vw, 14px);
   }
 
-  .stars-pop {
-    grid-row: 3;
+  .icon-and-title {
+    grid-template-columns: 10fr 1fr 0.5fr; 
   }
+
+  .grow {
+    justify-self: end;
+  }
+
+
+  
 
   .activities-title {
     padding-top: 8px;
@@ -670,8 +591,6 @@ a {
 
   .activities-block {
     width: auto;
-    margin-left: 72px;
-    margin-right: 72px;
   }
 
   .activities-card {
@@ -680,16 +599,15 @@ a {
     height: 267px;
   }
   .activities-card-wrapper {
-    min-width: 0;
     width: 100%;
     max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .activities-image-container img {
-    height: 211px;
+    height: 231px;
     width: 182px;
   }
 
@@ -707,40 +625,41 @@ a {
     width: 100%;
     overflow: hidden;
     width: auto;
-    margin-left: 72px;
-    margin-right: 72px;
     overflow: hidden;
+    grid-template-columns: 2fr 2fr 1fr 0.5fr;  
+    justify-items: flex-start;
+
   }
+
+  .footer h2 {
+white-space: nowrap;  }
 }
 
-@media all and (min-width: 300px) and (max-width: 767px) {
+@media all and (max-width: 767px) {
   body {
-    width: 100%;
-  }
-  header {
+margin: auto;  
+padding-left: 0px;
+padding-right: 0px;
+
+}
+ 
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
   .logo {
     text-align: center;
     padding-left: 0;
-    margin-bottom: 20px;
+    padding-top: 21px;
   }
 
-  .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 33%;
-    padding-right: 0;
-  }
 
-  /* Possibilité d'utiliser display grid également :
-  
+   
   .nav-link {
+    padding-top: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -749,7 +668,7 @@ a {
     padding-right: 0;
   }
   
-  */
+  
 
   .hebergements,
   .activites {
@@ -775,7 +694,7 @@ a {
     display: block;
     margin-top: 8px;
   }
-  .hebergement:hover .bar {
+  .hebergement:hover .bar , .activitie:hover .bar-two {
     display: block;
     background-color: #0065fc;
   }
@@ -790,10 +709,6 @@ a {
     margin-top: 8px;
   }
 
-  .activitie:hover .bar-two {
-    display: block;
-    background-color: #0065fc;
-  }
   .titre h1 {
     padding-top: 30px;
     padding-left: 20px;
@@ -803,9 +718,21 @@ a {
   }
 
   .form-horizontal {
-    padding-left: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    max-width: none;
+    margin-right: 0 ;
+    width: auto;
+    justify-self: center;
   }
+.form {
+  max-width: none;
+}
 
+.search-text {
+  width: 80%;
+}
   .search-icon {
     display: block;
     justify-content: center;
@@ -830,56 +757,63 @@ a {
   .filtres {
     display: flex;
     padding-left: 20px;
-    padding-right: 21px;
+    width: auto;
   }
 
   .filtres-container {
-    display: grid;
-    grid-template-rows: 1fr;
-  }
-
-  .title-filtre {
-    grid-row: 1;
-    padding-top: 25px;
-  }
+    width: 95%;
+  display: flex;
+  flex-direction: column;  
+    align-items: flex-start;
+}
 
   .filtre-border {
     flex-wrap: wrap;
     gap: 14px;
+    width: 100%;
   }
 
   .filtre {
-    width: 38%;
+    width: 45%;
     padding: 15px 0 15px 0;
     flex-grow: 1;
+    font-size: min(3.5vw, 15px);
+
   }
   .infos {
     padding-left: 20px;
   }
 
   .block-card {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: flex-start;
   }
   .second-block {
     min-width: 100%;
     max-width: 100%;
+    width: 100%;
     border-radius: 0px;
   }
   .card-container-second-block {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   .card-pop {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 20px;
+    margin-right: 20px;
     width: auto;
-    max-width: 100%;
-    min-width: auto;
     height: auto;
-    justify-content: flex-start;
   }
 
+  .title-pop, .title {
+    font-size: 16px;
+  }
+.text-pop, .text {
+  font-size: 15px;
+}
   .image-container-pop {
     width: 100%;
     max-width: 100%;
@@ -890,10 +824,14 @@ a {
     background-color: #ffffff;
   }
 
+  .card-container-first-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   .card {
-    max-width: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
+    width: auto;
   }
 
   .image-container {
@@ -907,8 +845,11 @@ a {
 
   .first-block h2 {
     margin-bottom: 30px;
+    padding-left: 20px;
   }
-
+.second-block h2 {
+  padding-left: 20px;
+}
   .show-more {
     display: none;
   }
@@ -919,7 +860,8 @@ a {
   }
   .activities-block h2 {
     padding-left: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
+    width: 50%;
   }
 
   .activities-card-wrapper {
@@ -927,29 +869,31 @@ a {
     width: 100%;
     justify-content: flex-start;
     align-items: center;
-    gap: 43px;
+    gap: 24px;
     height: 100%;
   }
   .activities-card-container {
     width: 90%;
+    padding-left: 20px;
+    margin-right: 20px;
     max-height: 190px;
-    min-height: 0px;
   }
 
   .activities-card {
     max-width: 100%;
     width: 100%;
-    max-height: 190px;
-    min-height: 0px;
+    height: 190px;
   }
   .activities-image-container {
     min-height: 0px;
     height: 134px;
+    width: 100%;
   }
 
   .activities-image-container img {
     height: 134px;
     object-fit: cover;
+    width: 100%;
   }
 
   .activities-card-body {
@@ -958,23 +902,17 @@ a {
   }
   .activities-title {
     padding-bottom: 12px;
+    font-size: 16px;
   }
 
   .footer {
+    display: flex;
     flex-direction: column;
     margin: auto;
+  }
+
+  .footer h2, .footer p  {
     padding-left: 20px;
   }
 }
 
-@media all and (min-width: 300px) and (max-width: 375px) {
-  .form-loc {
-    width: 100%;
-  }
-  .search-text {
-    width: 80%;
-  }
-  .search-button {
-    width: 20%;
-  }
-}

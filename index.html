@@ -20,7 +20,7 @@
       <div class="logo">
         <a href="#"><img src="images/logo/Booki.png" alt="logo"></a>
       </div>
-      <div class="nav-link">
+      <nav class="nav-link">
         <div class="hebergement">
           <a href="#heb" class="hebergements">Hébergements</a>
           <div class="bar"></div>
@@ -29,7 +29,7 @@
           <a href="#Act" class="activites">Activités</a>
           <div class="bar-two"></div>
         </div>
-      </div>
+      </nav>
     </header>
     <div class="hdp">
       <div class="titre">
@@ -54,6 +54,8 @@
             name="search-text"
             id="search-text"
             class="search-text"
+            placeholder="Marseille, France"
+
           >
           <label for="search-button"></label>
           <input
@@ -69,7 +71,7 @@
       </form>
     </div>
     <!-- div pour les filtres  -->
-    <div class="filtres">
+    <section class="filtres">
       <div class="filtres-container">
         <div class="title-filtre"><p>Filtres</p></div>
         <div class="filtre-border">
@@ -87,19 +89,19 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="infos">
+    </section>
+    <section class="infos">
       <div class="info-logo"><i class="fa-solid fa-info"></i></div>
       <div class="p-info">
         <span>Plus de 500 logements sont disponibles dans cette ville</span>
       </div>
-    </div>
+    </section>
     <!-- Création des blocks HEBERGEMENT & LES PLUS POPULAIRES + Création des cartes à l'intérieur des blocks -->
-    <div class="block-card">
+    <section class="block-card">
       <div class="first-block">
         <h2 id="heb">Hébergements à Marseille</h2>
         <div class="card-container-first-block">
-          <div class="card">
+          <article class="card">
             <a href="#">
               <div class="image-container">
                 <img
@@ -108,7 +110,7 @@
               </div>
               <div class="card-body">
                 <h3 class="title">Auberge La Canebière</h3>
-                <p class="text">Nuit à partir de 25€</p>
+                <p class="text">Nuit à partir de 25<B>€</B></p>
                 <div class="stars">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -118,8 +120,8 @@
                 </div>
               </div>
             </a>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="#">
               <div class="image-container">
                 <img
@@ -129,7 +131,7 @@
               </div>
               <div class="card-body">
                 <h3 class="title">Hôtel du port</h3>
-                <p class="text">Nuit à partir de 52€</p>
+                <p class="text">Nuit à partir de 52<B>€</B></p>
                 <div class="stars">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -139,8 +141,8 @@
                 </div>
               </div>
             </a>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="#">
               <div class="image-container">
                 <img
@@ -150,7 +152,7 @@
               </div>
               <div class="card-body">
                 <h3 class="title">Hôtel Les Mouettes</h3>
-                <p class="text">Nuit à partir de 76€</p>
+                <p class="text">Nuit à partir de 76<B>€</B></p>
                 <div class="stars">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -160,8 +162,8 @@
                 </div>
               </div>
             </a>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="#">
               <div class="image-container">
                 <img
@@ -171,7 +173,7 @@
               </div>
               <div class="card-body">
                 <h3 class="title">Hôtel de la mer</h3>
-                <p class="text">Nuit à partir de 46€</p>
+                <p class="text">Nuit à partir de 46<B>€</B></p>
                 <div class="stars">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -181,8 +183,8 @@
                 </div>
               </div>
             </a>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="#">
               <div class="image-container">
                 <img
@@ -191,8 +193,8 @@
                 >
               </div>
               <div class="card-body">
-                <h3 class="title">Aubege Le Panier</h3>
-                <p class="text">Nuit à partir de 23€</p>
+                <h3 class="title">Auberge Le Panier</h3>
+                <p class="text">Nuit à partir de 23<B>€</B></p>
                 <div class="stars">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -202,8 +204,8 @@
                 </div>
               </div>
             </a>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="#">
               <div class="image-container">
                 <img
@@ -213,7 +215,7 @@
               </div>
               <div class="card-body">
                 <h3 class="title">Hôtel Chez Amina</h3>
-                <p class="text">Nuit à partir de 96€</p>
+                <p class="text">Nuit à partir de 96<B>€</B></p>
                 <div class="stars">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -223,7 +225,7 @@
                 </div>
               </div>
             </a>
-          </div>
+          </article>
         </div>
         <div class="show-more"><p>Afficher plus</p></div>
       </div>
@@ -236,7 +238,7 @@
         </div>
         <div class="card-container-second-block">
           <a href="#">
-            <div class="card-pop">
+            <article class="card-pop">
               <div class="image-container-pop">
                 <img
                   src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
@@ -245,7 +247,7 @@
               </div>
               <div class="card-body-pop">
                 <h3 class="title-pop">Hôtel Le soleil du matin</h3>
-                <p class="text-pop">Nuit à partir de 128€</p>
+                <p class="text-pop">Nuit à partir de 128<B>€</B></p>
                 <div class="stars-pop">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -254,10 +256,10 @@
                   <i class="fa fa-star"></i>
                 </div>
               </div>
-            </div>
+            </article>
           </a>
           <a href="#">
-            <div class="card-pop">
+            <article class="card-pop">
               <div class="image-container-pop">
                 <img
                   src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
@@ -266,7 +268,7 @@
               </div>
               <div class="card-body-pop">
                 <h3 class="title-pop">Chambres d’hôtes Au cœur de l’eau</h3>
-                <p class="text-pop">Nuit à partir de 71€</p>
+                <p class="text-pop">Nuit à partir de 71<B>€</B></p>
                 <div class="stars-pop">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -275,10 +277,10 @@
                   <i class="fa fa-star"></i>
                 </div>
               </div>
-            </div>
+            </article>
           </a>
           <a href="#">
-            <div class="card-pop">
+            <article class="card-pop">
               <div class="image-container-pop">
                 <img
                   src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
@@ -287,7 +289,7 @@
               </div>
               <div class="card-body-pop">
                 <h3 class="title-pop">Hôtel Bleu et Blanc</h3>
-                <p class="text-pop">Nuit à partir de 68€</p>
+                <p class="text-pop">Nuit à partir de 68<B>€</B></p>
                 <div class="stars-pop">
                   <div class="bright"><i class="fa fa-star"></i></div>
                   <div class="bright"><i class="fa fa-star"></i></div>
@@ -296,12 +298,12 @@
                   <i class="fa fa-star"></i>
                 </div>
               </div>
-            </div>
+            </article>
           </a>
         </div>
       </div>
-    </div>
-    <div class="activities-block">
+    </section>
+    <section class="activities-block">
       <h2 id="Act">Activités à Marseille</h2>
       <div class="activities-card-wrapper">
         <div class="activities-card-container">
@@ -366,7 +368,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <footer>
       <div class="footer">
         <div class="a-propos">
