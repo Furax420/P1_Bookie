@@ -141,7 +141,7 @@ input:focus {
 .filtre-border {
   display: flex;
   flex-direction: row;
-  width: 58%;
+  width: 60%;
   justify-content: space-between;
 }
 .filtres-container {
@@ -226,12 +226,13 @@ a {
 
 .block-card h2 {
   padding-left: 5%;
+  font-size: min(2.5vw, 22px);
+
 }
 
 .first-block {
   position: relative;
-  display: grid; 
- height: auto;
+  height: auto;
   background-color: #f2f2f2;
   border-radius: 20px;
   width: 100%;
@@ -267,7 +268,7 @@ a {
   margin: auto;
   width: 100%;
   height: 14.5vw;
-  max-height:199px ;
+  max-height:189px ;
   background-color: #ffffff;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   border: 5px solid #ffffff;
@@ -280,7 +281,7 @@ a {
 .image-container {
   width: auto;
   position: relative;
-  height: min(134px, 9.2vw);
+  height: min(119px, 9.2vw);
   overflow: hidden;
 }
 
@@ -305,7 +306,7 @@ padding-left: 5px;
 .title {
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: min(1.2vw, 16px);
+  font-size: min(1.25vw, 16px);
     margin: 0;
     padding-top: 5px;
     padding-bottom: px;
@@ -359,7 +360,7 @@ flex-direction: column;
   margin: auto;
   width: auto;
   height: 10vw;
-  max-height: 144px;
+  max-height: 134px;
   min-height: 118px;
   background-color: #ffffff;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -372,13 +373,13 @@ flex-direction: column;
 .title-pop {
   margin: 0;
   padding-bottom: 0;
-  font-size: min(1.4vw, 16px);
+  font-size: min(1.25vw, 16px);
 }
 
 .text-pop {
   margin: 0;
   font-size: 15px;
-  font-size: min(1.4vw, 14px);
+  font-size: min(1.2vw, 14px);
 
 }
 
@@ -403,11 +404,11 @@ flex-direction: column;
 
 .icon-and-title {
 display: grid;
-grid-template-columns: 6.5fr 1fr; 
+grid-template-columns: 6.5fr 1.8fr; 
 align-items: center;
 margin-top: 1em;
 width: 95%;
-gap: 5%;
+gap: 2%;
 padding-left: 10%;
 }
 
@@ -420,6 +421,7 @@ h2.pop-title {
   justify-items: center; 
   align-self: center;
   color: #0065fc;
+  width: 50%;
 }
 
 .stars-pop {
@@ -458,9 +460,16 @@ font-size: 14px;
 .activities-title {
   margin: 0;
   padding-left: 19px;
-  padding-top: 5%;
   font-size: min(1.2vw, 16px);
+  height: 4.5vw;
+  max-height: 56px;
+  display: flex;
+  align-items: center;
+}
 
+.activities-card-body {
+  height: 4.5vw;
+  max-height: 56px;
 
 }
 .activities-card-container {
@@ -473,7 +482,8 @@ font-size: 14px;
 }
 
 .activities-card {
-  height: 100%;
+  height: 30vw;
+  max-height: 444px;
   width: 100%;
   position: relative;
   background-color: #ffffff;
@@ -517,7 +527,7 @@ justify-items: flex-start;
 
 .footer h2 {
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   font-size: 18px;
   margin-left:70px;
   white-space: nowrap;  }
@@ -560,13 +570,15 @@ justify-items: flex-start;
     flex-direction: column;
     gap: 30px;
   }
-
+  .block-card h2 {
+    font-size: 22px;
+  }
   .title {
-    font-size: min(1.8vw, 16px);
+    font-size: min(1.6vw, 16px);
   }
 
   .text {
-    font-size: min(1.6vw, 14px);
+    font-size: min(1.4vw, 14px);
 
   }
 
@@ -575,7 +587,7 @@ justify-items: flex-start;
   }
 
   .image-container {
-    height: min(134px, 13vw);
+    height: min(134px, 12.5vw);
   }
 
   .stars {
@@ -649,7 +661,7 @@ justify-items: flex-start;
   .activities-card {
     min-width: 0;
     width: 182px;
-    height: 267px;
+    height: 30vw;
   }
   .activities-card-wrapper {
     width: 100%;
@@ -660,12 +672,12 @@ justify-items: flex-start;
   }
 
   .activities-image-container img {
-    height: 231px;
-    width: 182px;
+    height: 100%;
+    width: 100%;
   }
 
   .activities-image-container  {
-    height: 211px;}
+    height: min(230px, 23.5vw);}
 
 
   .activities-card-container {
@@ -852,6 +864,9 @@ header {
     padding-left: 20px;
   }
 
+  .block-card h2 {
+    font-size: 22px;
+  }
   .block-card {
     display: flex;
     flex-direction: row;
@@ -913,6 +928,8 @@ padding-bottom: 0px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: #ffffff;
+
   }
   .card {
     margin: 0 20px;
@@ -932,8 +949,12 @@ padding-bottom: 0px;
   }
 
   .first-block h2 {
-    margin-bottom: 30px;
+    margin: 0;
+    padding-top: 1.8em;
+    padding-bottom: 30px;
     padding-left: 20px;
+    background-color: #ffffff;
+
   }
 .second-block h2 {
   padding-left: 20px;
@@ -949,7 +970,8 @@ padding-bottom: 0px;
   .activities-block h2 {
     padding-left: 20px;
     padding-bottom: 0px;
-    width: 50%;
+    width: 30.5vw;
+    min-width: 150px;
   }
 
   .activities-card-wrapper {
@@ -1005,14 +1027,14 @@ padding-bottom: 0px;
 
   .footer h2 {
     padding-left: 20px;
-    font-size: 16px;
+    font-size: 18px;
 
   }
   
   
   .footer p  {
     padding-left: 20px;
-    font-size: 15px;
+    font-size: 16px;
 
   }
 }
